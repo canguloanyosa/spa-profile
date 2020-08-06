@@ -1,0 +1,31 @@
+<h1>Profiles <small>Spa</small></h1>
+
+<hr />
+
+<div class="card-columns">
+  <div class="card" *ngFor="let profile of profiles; let id = index">
+    <img
+      src="{{ profile.image }}"
+      class="card-img-top"
+      alt="{{ profile.nombre }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ profile.nombre }}</h5>
+      <p class="card-text">
+        {{ profile.info }}
+      </p>
+      <p class="card-text">
+        Fecha de inicio:
+        <small class="text-muted"> {{ profile.inicio }} </small>
+      </p>
+      <button
+        (click)="detalleProfile(id)"
+        type="button"
+        class="btn btn-outline-primary btn-block"
+      >
+        Detalle
+      </button>
+      <!-- <a [routerLink]="['profile',id]">Detalle</a> -->
+    </div>
+  </div>
+</div>

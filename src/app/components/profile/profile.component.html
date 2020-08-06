@@ -1,0 +1,17 @@
+<h1>{{ profile.nombre }} <small>{{profile.inicio}}</small></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="profile.image" class="img-fluid" [alt]="profile.nombre">
+        <br><br>
+        <a [routerLink]="['/profiles']" class="btn btn-outline-danger btn-block">Retornar</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ profile.nombre }}</h3>
+        <hr>
+        <p>{{ profile.info }}</p>
+        <p>{{ profile.empresa }}</p>
+    </div>
+
+</div>
