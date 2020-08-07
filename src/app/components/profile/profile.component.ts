@@ -16,7 +16,8 @@ export class ProfileComponent implements OnInit {
     private profilesService: ProfilesService
   ) {
     this.activatedRoute.params.subscribe(( parametros ) => {
-      this.profile  = this.profilesService.obtenerProfile(parametros['indice']);
+      console.log(parametros);
+      this.profile = this.profilesService.obtenerProfile(parametros['indice']);
     })
   }
 
