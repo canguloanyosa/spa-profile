@@ -17,6 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProfilesComponent } from './components/profiles/profiles.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     HomeComponent,
     AboutComponent,
     ProfilesComponent,
-    ProfileComponent
+    ProfileComponent,
+    BuscadorComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,

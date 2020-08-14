@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ProfilesService {
 
-    private profiles: Profile [] = [
+    private profiles: Profile[] = [
         {
             nombre: 'Elki Guerrero',
             info: 'El trabajador del mes',
@@ -37,6 +37,23 @@ export class ProfilesService {
 
     obtenerProfile( indice: number ) {
         return this.profiles[indice];
+    }
+
+    buscarProfile(termino: string): Profile[] {
+        let profileArray: Profile[] = [];
+        termino = termino.toLowerCase();
+        
+        for(let profile of this.profiles) {
+
+            let nombre = profile.nombre.toLowerCase();
+
+            if(nombre.indexOf(termino) >= 0) {
+                profileArray.push(profile);
+            }
+        }
+
+        return profileArray;
+        
     }
 
 }
